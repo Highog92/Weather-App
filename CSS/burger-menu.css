@@ -1,0 +1,22 @@
+nav {
+    background-color: #504994;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.city {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.threedays {
+    display: flex;
+    flex-direction: row;
+}
