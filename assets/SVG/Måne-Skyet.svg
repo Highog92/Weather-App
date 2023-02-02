@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 215.72 214.68">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: #f7f9ff;
+      }
+
+      .cls-3 {
+        opacity: .52;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 8px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-3, .cls-5 {
+        isolation: isolate;
+      }
+
+      .cls-6 {
+        fill: #d1b3ff;
+      }
+
+      .cls-7 {
+        fill: #9b70ff;
+      }
+
+      .cls-8 {
+        fill: #d4b8ff;
+      }
+
+      .cls-9 {
+        fill: #bea1ff;
+      }
+
+      .cls-10 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-11 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-5 {
+        fill: #fff;
+        opacity: .35;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-900.15" y1="496.24" x2="-900.15" y2="495.31" gradientTransform="translate(126466.85 27178.92) rotate(-19) scale(122.89 -134.65)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b9a0ff"/>
+      <stop offset="1" stop-color="#855aff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-936.82" y1="-171.35" x2="-936.81" y2="-170.06" gradientTransform="translate(53686.26 79670.25) rotate(45.97) scale(100.8 97.86)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e0e8ff" stop-opacity="0"/>
+      <stop offset=".84" stop-color="#c7d4ff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#c9d6fd"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-941.84" y1="-166" x2="-941.83" y2="-164.72" gradientTransform="translate(180319.4 25870.61) scale(191.31 155.62)" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1-2">
+    <g id="Fuld_Måne" data-name="Fuld Måne">
+      <g id="Group_7437" data-name="Group 7437">
+        <g id="Group_7331" data-name="Group 7331">
+          <g id="Group_7330" data-name="Group 7330">
+            <g id="Ellipse_105" data-name="Ellipse 105">
+              <circle class="cls-9" cx="205.06" cy="21.33" r="10.66"/>
+            </g>
+            <g id="Ellipse_106" data-name="Ellipse 106">
+              <circle class="cls-7" cx="194.39" cy="67.94" r="10.66"/>
+              <circle class="cls-4" cx="194.39" cy="67.94" r="10.2"/>
+            </g>
+            <g id="Ellipse_109" data-name="Ellipse 109">
+              <circle class="cls-8" cx="193.93" cy="137.44" r="10.66"/>
+              <circle class="cls-4" cx="194.39" cy="137.44" r="10.2"/>
+            </g>
+            <g id="Ellipse_107" data-name="Ellipse 107">
+              <circle class="cls-7" cx="63.8" cy="47.08" r="10.66"/>
+              <circle class="cls-4" cx="63.8" cy="47.08" r="10.2"/>
+            </g>
+            <g id="Ellipse_108" data-name="Ellipse 108">
+              <circle class="cls-6" cx="91.31" cy="10.66" r="10.66"/>
+              <circle class="cls-4" cx="91.31" cy="10.66" r="10.2"/>
+            </g>
+            <path id="Path_4984" data-name="Path 4984" class="cls-11" d="m206.35,90.65c-9.09,33.07-43.27,52.51-76.33,43.42-33.07-9.09-52.51-43.27-43.42-76.33,9.08-33.06,43.25-52.51,76.32-43.42,2.63.72,5.2,1.61,7.71,2.68-15.94,18.94-13.51,47.21,5.43,63.15,8.45,7.11,19.24,10.85,30.27,10.5h.01Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="Sky">
+    <path id="Path_4982" data-name="Path 4982" class="cls-3" d="m107.96,131.57c-7.83-13.41-22.06-21.94-37.72-22.62-25.32-1.11-46.76,18.24-47.88,43.23"/>
+    <g id="Group_7337" data-name="Group 7337">
+      <path id="Path_4975" data-name="Path 4975" class="cls-2" d="m215.53,161.5c0-29.31-24.04-53.1-53.74-53.17h0c0-29.37-24.12-53.18-53.88-53.18s-53.88,23.81-53.88,53.18h-.14c-29.77,0-53.89,23.8-53.89,53.17s24.12,53.18,53.88,53.18c.47,0,.94,0,1.4-.02v.02h107.77v-.02c29.2-.75,52.48-24.33,52.48-53.16h0Z"/>
+      <path id="Union_21" data-name="Union 21" class="cls-1" d="m88.23,142.59c15.23,15.55,15.18,39.98-.12,54.57-15.29,14.59-40.04,13.81-55.27-1.73-15.22-15.54-15.18-39.98.12-54.57s40.04-13.81,55.27,1.73Z"/>
+      <path id="Union_22" data-name="Union 22" class="cls-10" d="m164.27,205.8c-13.8.42-36.99-1.07-43.18-1.07-33.29,0-45.13-18.52-57.55-40.23s26.31-71.79,42.83-78.66c5.31-2.21,21.59,5.34,25.95,16.16,3.28,8.13,3.97,31.72,15.92,36.99,13.34,5.88,23.8,7.73,31.04,10.5,18.46,2.45,32.45,14.14,32.45,28.19,0,15.83-17.76,28.67-39.68,28.67-2.61,0-5.21-.19-7.79-.56h.01Z"/>
+      <path id="Union_23" data-name="Union 23" class="cls-5" d="m101.69,142.15c7.85,20.19,7.18,39.22-1.5,42.51s-22.09-10.42-29.94-30.6c-7.85-20.18-7.18-39.22,1.5-42.51,8.68-3.29,22.08,10.41,29.94,30.6Z"/>
+    </g>
+  </g>
+</svg>

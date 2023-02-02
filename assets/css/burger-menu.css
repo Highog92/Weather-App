@@ -1,6 +1,17 @@
+header {
+    width: 308px;
+}
+
 nav {
     margin: 15px;
 }
+
+nav ul {
+    background-color: var(--lillaFokus);
+    border-radius: 10px;
+    padding: 10px;
+}
+
 
 nav ul li {
     display: flex;
@@ -8,6 +19,16 @@ nav ul li {
     justify-content: space-between;
     /* margin: 0 1rem 0 1rem; */
     padding: 10px;
+}
+
+nav ul li p {
+    color: var(--hvid);
+}
+
+
+nav ul li img {
+    width: 20%;
+
 }
 
 .burger-heading {
@@ -20,23 +41,24 @@ nav ul li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--lillaFokus);
     border-radius: 10px 10px 0px 0px;
     color: var(--hvid);
-    padding: 10px 10px 0 10px;
+    /* padding: 10px 10px 0 10px; */
 }
 
 .threedays {
     display: flex;
     flex-direction: row;
-    background-color: var(--lillaFokus);
-    border-radius: 0px 0px 10px 10px;
 }
 
-.last-visit{
+.threedays p {
+    margin: auto;
+}
+
+.last-visit {
     background-color: var(--lillaFokus);
     border-radius: 10px;
-    margin: 10px 0 10px 0;
+    margin: 20px 0 20px 0;
     padding: 10px;
     color: var(--hvid);
 }

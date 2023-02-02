@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 215.53 214.82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: #f7f9ff;
+      }
+
+      .cls-3 {
+        fill: #60a4f5;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-5 {
+        opacity: .52;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 8px;
+      }
+
+      .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-5, .cls-7 {
+        isolation: isolate;
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient-7);
+      }
+
+      .cls-10 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-11 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-12 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-7 {
+        fill: #fff;
+        opacity: .35;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-1304.45" y1="490.87" x2="-1304.44" y2="489.58" gradientTransform="translate(56960.77 127990.15) rotate(45.97) scale(100.8 -97.86)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e0e8ff" stop-opacity="0"/>
+      <stop offset=".84" stop-color="#c7d4ff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#c9d6fd"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-1312.89" y1="483.04" x2="-1312.88" y2="481.76" gradientTransform="translate(251305.04 75153.81) scale(191.31 -155.62)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="-368.75" y1="312.49" x2="-369.02" y2="312.64" gradientTransform="translate(18033.94 15283.99) scale(48.43 -48.39)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#57aaff"/>
+      <stop offset="1" stop-color="#b7daff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="-368.1" y1="312.46" x2="-368.37" y2="312.6" gradientTransform="translate(17850.87 15252.41) scale(48.35 -48.31)" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-5" x1="-368.15" y1="311.69" x2="-368.42" y2="311.84" gradientTransform="translate(16020.12 13819.16) scale(43.11 -43.89)" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-6" x1="-366.87" y1="309.97" x2="-367.14" y2="310.12" gradientTransform="translate(12888.54 10901.57) scale(34.83 -34.62)" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-7" x1="-367.86" y1="311.71" x2="-368.13" y2="311.86" gradientTransform="translate(15957.5 13823.18) scale(43.11 -43.88)" xlink:href="#linear-gradient-3"/>
+  </defs>
+  <g id="Sky">
+    <path id="Path_4982" data-name="Path 4982" class="cls-5" d="m107.96,76.42c-7.83-13.41-22.06-21.94-37.72-22.62-25.32-1.11-46.76,18.24-47.88,43.23"/>
+    <g id="Group_7337" data-name="Group 7337">
+      <path id="Path_4975" data-name="Path 4975" class="cls-2" d="m215.53,106.35c0-29.31-24.04-53.1-53.74-53.17h0c0-29.37-24.12-53.18-53.88-53.18s-53.88,23.81-53.88,53.18h-.14C24.12,53.18,0,76.98,0,106.35s24.12,53.18,53.88,53.18c.47,0,.94,0,1.4-.02v.02h107.77v-.02c29.2-.75,52.48-24.33,52.48-53.16h0Z"/>
+      <path id="Union_21" data-name="Union 21" class="cls-11" d="m88.23,87.44c15.23,15.55,15.18,39.98-.12,54.57-15.29,14.59-40.04,13.81-55.27-1.73-15.22-15.54-15.18-39.98.12-54.57s40.04-13.81,55.27,1.73h0Z"/>
+      <path id="Union_22" data-name="Union 22" class="cls-1" d="m164.27,150.65c-13.8.42-36.99-1.07-43.18-1.07-33.29,0-45.13-18.52-57.55-40.23s26.31-71.79,42.83-78.66c5.31-2.21,21.59,5.34,25.95,16.16,3.28,8.13,3.97,31.72,15.92,36.99,13.34,5.88,23.8,7.73,31.04,10.5,18.46,2.45,32.45,14.14,32.45,28.19,0,15.83-17.76,28.67-39.68,28.67-2.61,0-5.21-.19-7.79-.56h.01Z"/>
+      <path id="Union_23" data-name="Union 23" class="cls-7" d="m101.69,87c7.85,20.19,7.18,39.22-1.5,42.51s-22.09-10.42-29.94-30.6c-7.85-20.18-7.18-39.22,1.5-42.51,8.68-3.29,22.08,10.41,29.94,30.6Z"/>
+    </g>
+  </g>
+  <g id="Group_7366" data-name="Group 7366">
+    <path id="Path_5033" data-name="Path 5033" class="cls-10" d="m157.17,179.61c-4.49,0-8.14-3.64-8.14-8.14,0-2.16.86-4.23,2.39-5.76l22.28-22.24c3.16-3.19,8.32-3.21,11.51-.05,3.19,3.16,3.21,8.32.05,11.51-.02.02-.04.04-.06.06l-22.28,22.24c-1.52,1.53-3.59,2.38-5.75,2.38Z"/>
+    <path id="Path_5034" data-name="Path 5034" class="cls-12" d="m34.85,174.49c-4.49,0-8.13-3.65-8.13-8.14,0-2.16.86-4.23,2.38-5.75l22.28-22.24c3.2-3.16,8.35-3.13,11.51.07,3.14,3.17,3.13,8.28,0,11.45l-22.28,22.23c-1.52,1.53-3.59,2.38-5.75,2.38Z"/>
+    <path id="Path_5035" data-name="Path 5035" class="cls-8" d="m133.42,154.48c-4.49,0-8.14-3.64-8.13-8.14,0-2.11.82-4.14,2.29-5.65l18.14-18.76c3.16-3.19,8.32-3.21,11.51-.05,3.13,3.11,3.22,8.15.19,11.36l-18.14,18.76c-1.53,1.59-3.64,2.49-5.85,2.48Z"/>
+    <path id="Path_5036" data-name="Path 5036" class="cls-4" d="m99.05,182.88c-4.49,0-8.14-3.64-8.14-8.14,0-2.18.87-4.27,2.43-5.8l11.47-11.3c3.2-3.15,8.35-3.11,11.51.09,3.15,3.2,3.11,8.35-.09,11.51l-11.47,11.3c-1.52,1.5-3.57,2.34-5.71,2.34Z"/>
+    <path id="Path_5037" data-name="Path 5037" class="cls-9" d="m84.11,158.44c-4.49,0-8.14-3.65-8.13-8.14,0-2.11.82-4.14,2.29-5.65l18.14-18.76c3.16-3.19,8.32-3.21,11.51-.05,3.13,3.11,3.22,8.15.19,11.36l-18.14,18.76c-1.53,1.59-3.64,2.48-5.85,2.48Z"/>
+  </g>
+  <g id="Ellipse_125" data-name="Ellipse 125">
+    <circle class="cls-3" cx="124.86" cy="188.93" r="7.57"/>
+    <circle class="cls-6" cx="124.86" cy="188.93" r="7.17"/>
+  </g>
+  <g id="Ellipse_126" data-name="Ellipse 126">
+    <circle class="cls-3" cx="90.06" cy="207.25" r="7.57"/>
+    <circle class="cls-3" cx="29.02" cy="200.09" r="7.57"/>
+    <circle class="cls-3" cx="61.05" cy="184.95" r="7.57"/>
+  </g>
+  <g id="Ellipse_127" data-name="Ellipse 127">
+    <circle class="cls-3" cx="150.96" cy="206.65" r="7.57"/>
+    <circle class="cls-3" cx="182.44" cy="190.69" r="7.57"/>
+    <circle class="cls-6" cx="150.96" cy="206.65" r="7.17"/>
+  </g>
+</svg>
