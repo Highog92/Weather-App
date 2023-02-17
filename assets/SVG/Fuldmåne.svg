@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 224.38 204.73">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1a6ff;
+      }
+
+      .cls-2 {
+        fill: #d1b3ff;
+      }
+
+      .cls-3 {
+        fill: #9b70ff;
+      }
+
+      .cls-4 {
+        fill: #d4b8ff;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        fill: #bea1ff;
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-530.05" y1="-181.38" x2="-530.05" y2="-180.1" gradientTransform="translate(69632.91 1906.16) rotate(-19) scale(122.89 134.65)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b9a0ff"/>
+      <stop offset="1" stop-color="#855aff"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1-2">
+    <g id="Fuld_Måne" data-name="Fuld Måne">
+      <g id="Group_7437" data-name="Group 7437">
+        <g id="Group_7331" data-name="Group 7331">
+          <g id="Group_7330" data-name="Group 7330">
+            <g id="Ellipse_105" data-name="Ellipse 105">
+              <circle class="cls-6" cx="209.64" cy="29.48" r="14.74"/>
+            </g>
+            <g id="Ellipse_106" data-name="Ellipse 106">
+              <circle class="cls-3" cx="194.9" cy="93.92" r="14.74"/>
+              <circle class="cls-5" cx="194.9" cy="93.92" r="14.1"/>
+            </g>
+            <g id="Ellipse_109" data-name="Ellipse 109">
+              <circle class="cls-4" cx="194.26" cy="189.99" r="14.74"/>
+              <circle class="cls-5" cx="194.9" cy="189.99" r="14.1"/>
+            </g>
+            <g id="Ellipse_107" data-name="Ellipse 107">
+              <circle class="cls-3" cx="37.67" cy="186.71" r="14.74"/>
+              <circle class="cls-5" cx="37.67" cy="186.71" r="14.1"/>
+            </g>
+            <g id="Ellipse_111" data-name="Ellipse 111">
+              <circle class="cls-3" cx="14.74" cy="119.56" r="14.74"/>
+              <circle class="cls-1" cx="14.74" cy="119.56" r="14.1"/>
+            </g>
+            <g id="Ellipse_108" data-name="Ellipse 108">
+              <circle class="cls-2" cx="52.41" cy="14.74" r="14.74"/>
+              <circle class="cls-5" cx="52.41" cy="14.74" r="14.1"/>
+            </g>
+            <path id="Path_4984" data-name="Path 4984" class="cls-7" d="m211.43,125.31c-12.56,45.72-59.81,72.58-105.52,60.02-45.72-12.56-72.58-59.81-60.02-105.52C58.44,34.11,105.68,7.23,151.39,19.79c3.63.99,7.19,2.23,10.66,3.7-22.04,26.18-18.67,65.26,7.51,87.3,11.68,9.83,26.59,15,41.85,14.52h.01Z"/>
+          </g>
+          <g id="Ellipse_105-2" data-name="Ellipse 105">
+            <circle class="cls-6" cx="14.74" cy="119.56" r="14.74"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
