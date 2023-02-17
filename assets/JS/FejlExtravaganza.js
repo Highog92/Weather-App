@@ -1,5 +1,11 @@
 fejl og en mas
-
+smfsldfmkaomfaorrmadfkvmdæfv
+asdfsasdf
+SVGDefsElementdfs
+d
+falsesd
+false
+ssatisfiesadfga
 //Starter funktionen fetchData (Dummy Data)
 
 await new Promise(resolve => setTimeout(resolve, 2000));
