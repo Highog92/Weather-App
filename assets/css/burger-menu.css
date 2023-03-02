@@ -1,9 +1,9 @@
 header {
     width: 308px;
+    margin: 15px;
 }
 
 #Burger-menu {
-    margin: 15px;
 }
 
 nav ul {
@@ -31,7 +31,7 @@ nav ul li img {
 
 }
 
-.burger-heading {
+.location-Heading{
     color: var(--bgHeading);
     font-weight: bold;
     margin: 10px 0 10px 0;
