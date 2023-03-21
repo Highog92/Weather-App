@@ -47,6 +47,8 @@ threeDaysUl.appendChild(threeDaysLi)
 
 let dayOneImg = document.createElement('img')
 threeDaysLi.appendChild(dayOneImg)
+img.src = assets/SVG/Fuld-sol.svg;
+
 
 let dayOneTemp = document.createElement('p')
 // let temperature = `<p>${'temperatur vises her'}</p>`;
