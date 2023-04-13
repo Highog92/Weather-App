@@ -95,12 +95,12 @@ function homeLanding(myData) {
    solDiv.appendChild(solopGang);
    //   solopgang
    let solopgang = document.createElement('p');
-   solopgang.classList.add('solopgangClass');
+   solopgang.classList.add('solopGangClass');
    solopgang.innerText = myData.solopgang;
    solDiv.appendChild(solopgang);
    //icon til solnedgang
    let solnedGangIcon = document.createElement('span');
-   solnedGangIcon.innerHTML = myData.icon
+   solnedGangIcon.innerHTML = myData.solnedicon;
    solnedGangIcon.classList.add('solnedgangClass');
    solDiv.appendChild(solnedGangIcon);
    //  solnedgang
@@ -309,7 +309,7 @@ function ugeView(myCardData) {
 //Starter funktionen fetchData (Dummy Data)
 async function fetchData() {
 
-   await new Promise(resolve => setTimeout(resolve, 500));//SKAL ÆDRES TIL 2 SEKUNDER
+   await new Promise(resolve => setTimeout(resolve, 5000));//SKAL ÆDRES TIL 2 SEKUNDER
 
    const myData = [
 
