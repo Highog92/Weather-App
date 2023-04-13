@@ -46,6 +46,7 @@ nav ul li img {
     width: 308px;
     padding: 15px;
     border-radius: 10px;
+    background-color: var(--hvid);
 }
 
 .burger-lines {
