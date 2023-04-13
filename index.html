@@ -7,10 +7,62 @@
     <title>Mads og Kamilla og Aminas weather app</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="assets/css/loading.css">
+    <link rel="stylesheet" href="./assets/css/burger-menu.css">
     <script src="./assets/js/ugeView.js" defer></script>
+    <script src="./assets/js/burger.js" defer></script>
 
 </head>
 <body>
+    <header>
+        <div class="burger-lines">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <nav class="burger-box">
+                <span>
+                    <input type="text" placeholder="Søg lokation" />
+                </span>
+
+                <h3 class="burger-heading">Lokationer</h3>
+                <ul>
+                    <li class="city-weather">
+                        <p>[Bynavn]</p>
+                        <img src="" alt="f-s">
+                    </li>
+                    <li class="threedays">
+                        <img src="assets/SVG/Fuld-sol.svg" alt="vejr-billed-dag1">
+                        <p>-3°</p>
+                        <img src="assets/SVG/Sol-skyer.svg" alt="vejr-billed-dag2">
+                        <p>-3°</p>
+                        <img src="assets/SVG/Sol-letskyet.svg" alt="vejr-billed-dag3">
+                        <p>-3°</p>
+                    </li>
+                </ul>
+                
+                <p class="burger-heading">Sidst besøgt</p>
+                
+                <ul class="last-visit">
+                    <li>
+                        <p>[Bynavn]</p>
+                        <img src="" alt="favorit-stjerne">
+            </li>
+        </ul>
+
+        <ul class="last-visit">
+            <li>
+                <p>[Bynavn]</p>
+                <img src="" alt="favorit-stjerne">
+            </li>
+        </ul>
+        <hr>
+        <p>M's, K's & A's</p>
+        <p>Meteologisk Institut</p>
+        
+    </ul>
+    </nav>
+</header>
     <section id="akmApp"></section>
 </body>
 </html>

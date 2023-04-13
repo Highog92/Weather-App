@@ -76,7 +76,7 @@ function homeLanding(myData) {
    mainRamme.appendChild(vindNu);
    //    nedbørNu
    let regnNu = document.createElement('p');
-   regnNu.classList.add('nedbørNuClass');
+   regnNu.classList.add('regnNuClass');
    regnNu.innerText = myData.regn;
    mainRamme.appendChild(regnNu);
    //    iconNu
@@ -111,38 +111,38 @@ function homeLanding(myData) {
 
    //////////////////////////////////////////////////////////////////////////////////////////////
    /*LILLE RAMME (lille card) som indeholder klokkeslæt, img, temp*/
-   
-   
+
+
    let scrollSection = document.createElement('section')
    scrollSection.classList.add('scrollSection')
    homeLanding.appendChild(scrollSection)
-   
+
    // Ganger det hele 48 gange
-   for (let i = 0; i < 48; i++){
+   for (let i = 0; i < 48; i++) {
       //    lille card
       let lilleCard = document.createElement('div');
       lilleCard.classList.add('lilleRammeClass');
       scrollSection.appendChild(lilleCard);
-      
-   //    klokkeslet
-   let klokke = document.createElement('p');
-   klokke.classList.add('klokkeClass');
-   klokke.innerText = myData.time;
-   lilleCard.appendChild(klokke);
-   
-   //    tempbillede
-   let tempBillede = document.createElement('p');
-   tempBillede.innerHTML = myData.solnedicon;
-   tempBillede.classList.add('tempBilled');
-   lilleCard.appendChild(tempBillede);
-   
-   //   lille temp
-   let lilleTemp = document.createElement('p');
-   lilleTemp.classList.add('lilleTempClass');
-   lilleTemp.innerText = myData.temp;
-   lilleCard.appendChild(lilleTemp);
-}
-   
+
+      //    klokkeslet
+      let klokke = document.createElement('p');
+      klokke.classList.add('klokkeClass');
+      klokke.innerText = myData.time;
+      lilleCard.appendChild(klokke);
+
+      //    tempbillede
+      let tempBillede = document.createElement('p');
+      tempBillede.innerHTML = myData.solnedicon;
+      tempBillede.classList.add('tempBilled');
+      lilleCard.appendChild(tempBillede);
+
+      //   lille temp
+      let lilleTemp = document.createElement('p');
+      lilleTemp.classList.add('lilleTempClass');
+      lilleTemp.innerText = myData.temp;
+      lilleCard.appendChild(lilleTemp);
+   }
+
    ///////////////////////////////////////////////////////////////////////////////////////////
    /*BUTTONS - I DAG og UGEN*/
    // div til de to knapper
@@ -172,12 +172,12 @@ function homeLanding(myData) {
 function bygUgenCards(data) {
    // console.log("her er det data ", data);
    //map-metoden finder data for hvert card, og sender det til en funktion der
-   //kan bygge dit galleri kort for dyret. funktionen hedder buildCard, og har brug for data for dyret
+   //kan bygge dit galleri kort for dyret. funktionen hedder buildCard, og har brugfor data for dyret
    ugeView(data);
 }
 function ugeView(myCardData) {
    console.log("her er det data ", myCardData);
-   let { by, dato, icon, //destructuring af data
+  /*  let { by, dato, icon, //destructuring af data
       regn,
       solnedgang,
       solnedicon,
@@ -185,33 +185,123 @@ function ugeView(myCardData) {
       solopicon,
       temp,
       time,
-      vindHastighed } = myCardData;
+      vindHastighed } = myCardData; */
 
 
-   //Funktionen ugeView()
-   //Bygger Ugesiden
-   let ugeView = document.createElement('section');
-   ugeView.classList.add('ugeViewClass');
+   /*  
+    
+   /**
+    * Convert a given date to the format yyyy-mm-dd
+    * @param {Number} addDays
+    * @returns Date String
+    */
+   const main = document.getElementById("akmApp")
 
-   console.log("Her er Ugeview Sectionen ", ugeView);
+   let knapContainer = document.createElement('div');
+   
+   // knap (button) i Dag 
+   let idagTo = document.createElement('a'); 
+   idagTo.style.color = 'red';
+   idagTo.innerText = 'I DAG'; 
+   
+   // knap (button) ugen 
+   let ugenTo = document.createElement('a'); 
+   ugenTo.style.color = 'red';
+   ugenTo.innerText = 'UGEN'; 
+   knapContainer.appendChild(ugenTo); 
+   knapContainer.appendChild(idagTo); 
+   main.appendChild(knapContainer); 
 
-   //Bygger tabellen(card)
-   let tabel = document.createElement('section');
-   tabel.classList.add('tabelClass');
-   ugeView.appendChild(tabel);
 
-   //Bygger Dato
-   let datoen = document.createElement('p');
-   datoen.innerHTML = dato;
-   console.log("her er datoen", dato)
-   datoen.style.backgroundColor = "pink";
-   datoen.style.width = "200px";
-   datoen.style.height = "200px";
-   tabel.appendChild(datoen);
-   console.log("her er p ", datoen);
-   //
+   idagTo.addEventListener("click", (e) => { 
+      e.preventDefault();
+      sletSide(); 
+      bygCards(myCardData);
+   });
 
-   myApp.appendChild(ugeView);
+   const setApiDate = (addDays = 0) => {
+      let curDate = addDays
+         ? new Date(new Date().getTime() + addDays * 86400 * 1000)
+         : new Date()
+      let strYear = curDate.getFullYear()
+      let strMonth = (curDate.getMonth() + 1).toString().padStart(2, 0)
+      let strDate = curDate.getDate().toString().padStart(2, 0)
+      return `${strYear}-${strMonth}-${strDate}`
+   }
+
+   /**
+    * Fetch data from a given endpoint
+    * @param {String} endpoint
+    * @returns JSON Object
+    */
+   const getData = async (endpoint) => {
+      const result = await fetch(endpoint)
+      const data = await result.json()
+      return data
+   }
+
+      /**
+       * Eksekverer asynkron function
+       */
+      ; (async () => {
+         const start_date = setApiDate()
+         const stop_date = setApiDate(6)
+
+         const url = `https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,windspeed_10m,rain,snowfall&daily=sunrise,sunset&current_weather=true&start_date=${start_date}&end_date=${stop_date}&timezone=Europe%2FBerlin`
+
+         const accData = []
+
+         const data = await getData(url)
+         console.log(data);
+
+
+         data.hourly.time.map((value, key) => {
+            accData.push({
+               date: value.split('T')[0],
+               time: value.split('T')[1],
+               rain: data.hourly.rain[key],
+               temperature: data.hourly.temperature_2m[key],
+               windspeed: data.hourly.windspeed_10m[key],
+            })
+         })
+
+         data.daily.time.map((value, key) => {
+            const table = document.createElement('table')
+            table.classList.add('weatherscheme')
+            const tr = document.createElement('tr')
+            const th = document.createElement('th')
+            th.setAttribute('colspan', 4)
+            th.innerText = value;
+            tr.append(th)
+            table.append(tr)
+            const hours = accData.filter(x => x.date === value)
+            hours.map((hour, index) => {
+               if (index % 6 === 0) {
+                  const tr = document.createElement('tr')
+                  const td_time = document.createElement('td')
+                  const td_rain = document.createElement('td')
+                  const td_temp = document.createElement('td')
+                  const td_wind = document.createElement('td')
+
+                  const newtime = `${(+hour.time.split(':')[0] + 6).toString().padStart(2, 0)}:00`
+                  td_time.innerText = `${hour.time} - ${newtime}:`
+                  td_rain.innerText = `${hour.rain}`
+                  td_temp.innerText = `${hour.temperature}`
+                  td_wind.innerText = `${hour.windspeed}`
+
+                  tr.appendChild(td_time)
+                  tr.appendChild(td_temp)
+                  tr.appendChild(td_rain)
+                  tr.appendChild(td_wind)
+                  table.append(tr)
+               }
+            })
+
+            console.log(hours);
+            main.appendChild(table)
+         })
+
+      })()
 
 };
 
@@ -227,7 +317,7 @@ async function fetchData() {
          dato: '16.02.2023',
          time: '11.56',
          by: 'Aalborg',
-         temp: '-5',
+         temp: '8o',
          vindHastighed: '20m/s',
          regn: '0mm',
          icon: '⛈️',
@@ -240,7 +330,7 @@ async function fetchData() {
          dato: '16.02.2023',
          time: '11.56',
          by: 'Nørresundby',
-         temp: '-7',
+         temp: '7o',
          vindHastighed: '25m/s',
          regn: '0mm',
          icon: '⛈️',
