@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap');
+:root {
+    --hvid: #fefefe;
+    --grå: rgba(255, 255, 255, 87%);
+    --lillaFokus: #6200EE;
+    --lillaNofokus: #3700B3;
+    --lillaBG: #30009C;
+    --solOpgang: #FEDA39;
+    --solNedgang: #F87400;
+    --p: 'Poppins', sans-serif;
+    --bgHeading: #23036A;
+}
+
+
+.divButton{
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+}
+
+
+.divButton a{
+    background-color: var(--lillaFokus);
+    border-style: none;
+    border-radius: 100px;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
