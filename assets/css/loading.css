@@ -9,7 +9,7 @@
 .loadingIconClass {
   display: grid;
   filter: hue-rotate(10deg);
-  width: 15vw;
+  width: 70%;
   border: solid 10px var(--lillaFokus);
 
   filter: drop-shadow();
