@@ -19,7 +19,7 @@ function bygLoadScreen() {
    myApp.appendChild(loadingSection);
    //BYGGER IMG TIL LOADING ICON                  
    let loadingIcon = document.createElement('img');
-   loadingIcon.src = './assets/images/loading.png';
+   loadingIcon.src = './assets/images/weather_dribbble_size.gif.gif';
    loadingIcon.classList.add('loadingIconClass');
    loadingSection.appendChild(loadingIcon);
 }
@@ -219,7 +219,7 @@ function ugeView(myCardData) {
 //Starter funktionen fetchData (Dummy Data)
 async function fetchData() {
 
-   await new Promise(resolve => setTimeout(resolve, 200));//SKAL ÆDRES TIL 2 SEKUNDER
+   await new Promise(resolve => setTimeout(resolve, 5000));//SKAL ÆDRES TIL 2 SEKUNDER
 
    const myData = [
 
