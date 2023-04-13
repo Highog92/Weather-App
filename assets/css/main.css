@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap');
-:root{
+
+:root {
     --hvid: #fefefe;
     --grå: rgba(255, 255, 255, 87%);
     --lillaFokus: #6200EE;
@@ -10,11 +11,108 @@
     --p: 'Poppins', sans-serif;
     --bgHeading: #23036A;
 }
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     font-family: var(--p);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--hvid);
+}
+
+h1,
+p {
+    color: var(--hvid);
+    margin: 1rem;
+}
+
+
+.iconNuClass {
+    display: block;
+    font-size: 6rem;
+    line-height: 0.8;
+    margin-bottom: 30px;
+}
+
+.homeLandingClass {
+    background-color: var(--lillaBG);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.solDivClass {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+
+
+.solopGangClass {
+    position: relative;
+    padding: 0;
+    text-align: center;
+    display: inline;
+    font-size: 1.5rem;
+    margin: auto;
+
+}
+
+.solnedgangClass {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+.divKnapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+}
+
+.divKnapper a {
+    background-color: var(--lillaFokus);
+    border-style: none;
+    border-radius: 100px;
+    width: 50%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.scrollSection{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+.scrollSection::-webkit-scrollbar{
+display: none;
+}
+
+.lilleRammeClass {
+    margin: 1rem 5px 2rem 5px;
+    border-style: none;
+    background-color: var(--lillaFokus);
+    width: 60px;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.lilleRammeClass p{
+    font-size: 1rem;
+    
 }
