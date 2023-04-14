@@ -17,6 +17,13 @@ table {
     border-spacing: 15px;
 }
 
+.weatherscheme tr{
+    display: flex;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    justify-content: space-evenly;
+    margin: 5px;
+}
+
 .weatherscheme td {
     margin-right: 10px;
     border-bottom: solid;

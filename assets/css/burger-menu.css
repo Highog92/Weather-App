@@ -43,7 +43,7 @@ nav ul li img {
 /* --------------------------------------------------------- */
 
 .burger-box {
-    width: 308px;
+    width: 100vw;
     padding: 15px;
     border-radius: 10px;
     background-color: var(--hvid);
@@ -71,10 +71,10 @@ nav ul li img {
 
     .nav-links {
         position: absolute;
-        right: 0;
+        right: -4rem;
         /* width: 100vw; */
         /* height: 100vh; */
-        top: 7rem; /*højde på burger knappen*/
+        top: 1.5rem; /*højde på burgerbox*/
         /* background-color: #504994; */
         display: flex;
         flex-direction: column;
