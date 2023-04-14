@@ -1,9 +1,19 @@
-header {
+/* header {
     width: 308px;
+    padding: 15px;
+    background-color: bisque;
+} */
+
+
+
+p,
+h3 {
+    margin: 1em 0 1em 0;
 }
 
-#Burger-menu {
-    margin: 15px;
+nav span input {
+    margin: 1em 0 0 0;
+
 }
 
 nav ul {
@@ -17,7 +27,6 @@ nav ul li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin: 0 1rem 0 1rem; */
     padding: 10px;
 }
 
@@ -31,7 +40,99 @@ nav ul li img {
 
 }
 
-.burger-heading {
+/* --------------------------------------------------------- */
+
+.burger-box {
+    width: 100vw;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--hvid);
+    overflow: hidden;
+    
+}
+
+.burger-lines {
+    display: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.burger-lines div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin: 4px 0px;
+    transition: all 0.3s ease;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+
+
+    .nav-links {
+        /* display: none; */
+        display: flex;
+        position: absolute;
+        right: -4rem;
+        /* width: 100vw; */
+        /* height: 100vh; */
+        top: 1.5rem;
+        /*højde på burgerbox*/
+        /* background-color: #504994; */
+        /* flex-direction: column; */
+        align-items: center;
+        transform: translate(100vw);
+        transition: transform 0.5s ease-in;
+    }
+
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger-lines {
+        display: block;
+    }
+}
+
+.nav-active {
+    display: inline-block;
+    transform: translate(-20vw);
+}
+
+@keyframes navLinkFade {
+    from {
+
+        opacity: 0;
+        transform: translate(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px)
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* --------------------------------------------------------- */
+
+.location-Heading {
     color: var(--bgHeading);
     font-weight: bold;
     margin: 10px 0 10px 0;
@@ -43,7 +144,7 @@ nav ul li img {
     justify-content: space-between;
     border-radius: 10px 10px 0px 0px;
     color: var(--hvid);
-    /* padding: 10px 10px 0 10px; */
+    padding: 10px 10px 0 10px;
 }
 
 .threedays {
@@ -58,7 +159,7 @@ nav ul li img {
 .last-visit {
     background-color: var(--lillaFokus);
     border-radius: 10px;
-    margin: 20px 0 20px 0;
+    margin: 1em 0 1em 0;
     padding: 10px;
     color: var(--hvid);
 }
