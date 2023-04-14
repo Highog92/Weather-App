@@ -1,4 +1,7 @@
+header{
 
+
+}
 
 p,
 h3 {
@@ -10,14 +13,16 @@ nav ul {
     background-color: var(--lillaFokus);
     border-radius: 10px;
     padding: 10px;
+    width: 320px;
+    height: 658px;
 }
 
 
 nav ul li {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
-    /* margin: 0 1rem 0 1rem; */
+    margin: 0 1rem 0 1rem;
     padding: 10px;
 }
 
@@ -39,12 +44,12 @@ nav ul li img {
     background-color: var(--hvid);
     overflow: hidden;
     display: inline-block;
-    transform: translate(-20vw);
+    /* transform: translate(-20vw); */
 
 }
 
 .burger-lines {
-    display: none;
+    overflow: hidden;
     cursor: pointer;
     margin-left: 10px;
 }
@@ -60,23 +65,13 @@ nav ul li img {
 
 
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-
-
+   
 
     .nav-links {
-        /* display: none; */
         display: flex;
+        flex-direction: column;
         position: absolute;
-        right: -4rem;
-        /* width: 100vw; */
-        /* height: 100vh; */
-        top: 1.5rem;
         /*højde på burgerbox*/
-        /* background-color: #504994; */
-        /* flex-direction: column; */
         align-items: center;
         transform: translate(100vw);
         transition: transform 0.5s ease-in;
@@ -84,7 +79,7 @@ nav ul li img {
 
 
     .nav-links li {
-        opacity: 0;
+        /* opacity: 1; */
     }
 
     .burger-lines {
@@ -142,6 +137,7 @@ nav ul li img {
 .threedays {
     display: flex;
     flex-direction: row;
+    background-color: var(--lillaFokus);
 }
 
 .threedays p {

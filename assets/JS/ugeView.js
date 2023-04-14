@@ -264,7 +264,7 @@ function ugeView(myCardData) {
 
       /**
        * Eksekverer asynkron function
-       */
+      */
       ; (async () => {
          const start_date = setApiDate()
          const stop_date = setApiDate(6)
@@ -274,7 +274,6 @@ function ugeView(myCardData) {
          const accData = []
 
          const data = await getData(url)
-         console.log(data);
 
 
          data.hourly.time.map((value, key) => {
@@ -331,7 +330,7 @@ function ugeView(myCardData) {
 //Starter funktionen fetchData (Dummy Data)
 async function asyncLoad(data) {
 
-   await new Promise(resolve => setTimeout(resolve, 5000));//SKAL ÆDRES TIL 2 SEKUNDER
+   await new Promise(resolve => setTimeout(resolve, 1000));//SKAL ÆDRES TIL 2 SEKUNDER
 
    dataCard = [
 
@@ -357,7 +356,7 @@ async function asyncLoad(data) {
          regn: data.hourly.precipitation[0] + 'mm', 
          icon: '/assets/SVG/Fuld-sol.svg', 
          solopicon: '/assets/SVG/solOpGang.png', 
-         solopgang: data.daily.sunrise[0], 
+         solopgang: data.daily.sunrise[0],
          solnedicon: '/assets/SVG/solNedGang.png',
          solnedgang: data.daily.sunset[0]
       },

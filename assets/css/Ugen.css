@@ -1,5 +1,6 @@
 #akmApp {
     background-color: var(--lillaBG);
+    height: 100%;
 }
 
 table {
