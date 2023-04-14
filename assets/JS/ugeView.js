@@ -8,7 +8,7 @@ window.addEventListener("load", hentLoadScreen);
 function hentLoadScreen() {
    fetch(myUri)
       .then(
-         (dataModtaget)=> {
+         (dataModtaget) => {
             return dataModtaget.json();
          }
       )
@@ -16,7 +16,7 @@ function hentLoadScreen() {
          (data) => {
             bygLoadScreen();
             asyncLoad(data);
-            console.log({data});
+            console.log({ data });
          }
       )
       .catch( //er det kun tastefejl/stavefejl i uri'en?
@@ -57,7 +57,7 @@ function sletSide() {
    myApp.innerHTML = "";
 }
 function bygCards(data) {
-   console.log("Her er data: ", {data})
+   console.log("Her er data: ", { data })
    //map-metoden finder data for hvert card, og sender det til en funktion der
    //kan bygge dit galleri kort for dyret. funktionen hedder buildCard, og har brugfor data for dyret
    data.map((cards) => {
@@ -96,11 +96,13 @@ function homeLanding(myData) {
    regnNu.classList.add('regnNuClass');
    regnNu.innerText = myData.regn;
    mainRamme.appendChild(regnNu);
+
    //    iconNu
    let iconNu = document.createElement('img');
-   iconNu.scr = myData.icon;
+   iconNu.src = myData.icon;
    iconNu.classList.add('iconNuClass');
    mainRamme.appendChild(iconNu);
+
    //    solDiv
    let solDiv = document.createElement('div');
    solDiv.classList.add('solDivClass');
@@ -149,7 +151,7 @@ function homeLanding(myData) {
 
       //    tempbillede
       let tempBillede = document.createElement('img');
-      tempBillede.src = myData.solnedicon;
+      tempBillede.src = myData.icon;
       tempBillede.classList.add('tempBilled');
       lilleCard.appendChild(tempBillede);
 
@@ -194,15 +196,15 @@ function bygUgenCards(data) {
 }
 function ugeView(myCardData) {
    console.log("her er det data ", myCardData);
-  /*  let { by, dato, icon, //destructuring af data
-      regn,
-      solnedgang,
-      solnedicon,
-      solopgang,
-      solopicon,
-      temp,
-      time,
-      vindHastighed } = myCardData; */
+   /*  let { by, dato, icon, //destructuring af data
+       regn,
+       solnedgang,
+       solnedicon,
+       solopgang,
+       solopicon,
+       temp,
+       time,
+       vindHastighed } = myCardData; */
 
 
    /*  
@@ -217,26 +219,26 @@ function ugeView(myCardData) {
    let knapContainer = document.createElement('div');
    knapContainer.classList.add('divButton');
    // knap (button) i Dag 
-   let idagTo = document.createElement('a'); 
+   let idagTo = document.createElement('a');
    idagTo.classList.add('idagToClass');
    // idagTo.style.color = 'blue';
-   idagTo.innerText = 'I DAG'; 
-   
+   idagTo.innerText = 'I DAG';
+
    // knap (button) ugen 
-   let ugenTo = document.createElement('a'); 
+   let ugenTo = document.createElement('a');
    // ugenTo.style.color = 'black';
    ugenTo.classList.add('ugeToClass');
-   ugenTo.innerText = 'UGEN'; 
-   knapContainer.appendChild(ugenTo); 
-   knapContainer.appendChild(idagTo); 
-   main.appendChild(knapContainer); 
+   ugenTo.innerText = 'UGEN';
+   knapContainer.appendChild(ugenTo);
+   knapContainer.appendChild(idagTo);
+   main.appendChild(knapContainer);
 
 
-   idagTo.addEventListener("click", (e) => { 
+   idagTo.addEventListener("click", (e) => {
       e.preventDefault();
-      sletSide(); 
+      sletSide();
       bygCards(myCardData);
-      console.log({myCardData});
+      console.log({ myCardData });
    });
 
    const setApiDate = (addDays = 0) => {
@@ -337,26 +339,26 @@ async function asyncLoad(data) {
          dato: data.daily.time[0],
          time: '11.56',
          by: 'Aalborg',
-         temp: data.hourly.temperature_2m[0]+'\u00B0',
-         vindHastighed: data.hourly.windspeed_10m[0]+'m/s',
-         regn: data.hourly.precipitation[0]+'mm',
-         icon: 'assets/SVG/Fuld-sol.svg',
-         solopicon: '../SVG/solOpGang.png',
+         temp: data.hourly.temperature_2m[0] + '\u00B0',
+         vindHastighed: data.hourly.windspeed_10m[0] + 'm/s',
+         regn: data.hourly.precipitation[0] + 'mm',
+         icon: '/assets/SVG/Fuld-sol.svg',
+         solopicon: '/assets/SVG/solOpGang.png',
          solopgang: data.daily.sunrise[0],
-         solnedicon: '../SVG/solNedGang.png',
+         solnedicon: '/assets/SVG/solNedGang.png',
          solnedgang: data.daily.sunset[0]
       },
       {
          dato: data.daily.time[0],
-         time: '11.56',
-         by: 'Nørresundby',
-         temp: data.hourly.temperature_2m[0]+'\u00B0',
-         vindHastighed: data.hourly.windspeed_10m[0]+'m/s',
-         regn: data.hourly.precipitation[0]+'mm',
-         icon: '../SVG/Fuld-sol.svg',
-         solopicon: '../SVG/solOpGang.png',
-         solopgang: data.daily.sunrise[0],
-         solnedicon: '../SVG/solNedGang.png',
+         time: '11.56', 
+         by: 'Nørresundby', 
+         temp: data.hourly.temperature_2m[0] + '\u00B0', 
+         vindHastighed: data.hourly.windspeed_10m[0] + 'm/s', 
+         regn: data.hourly.precipitation[0] + 'mm', 
+         icon: '/assets/SVG/Fuld-sol.svg', 
+         solopicon: '/assets/SVG/solOpGang.png', 
+         solopgang: data.daily.sunrise[0], 
+         solnedicon: '/assets/SVG/solNedGang.png',
          solnedgang: data.daily.sunset[0]
       },
    ];
