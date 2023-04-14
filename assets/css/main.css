@@ -89,7 +89,8 @@ p {
     background-color: var(--lillaFokus);
     border-style: none;
     border-radius: 100px;
-    width: 50%;
+    width: 50%; 
+    
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }

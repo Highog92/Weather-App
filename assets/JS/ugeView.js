@@ -215,15 +215,17 @@ function ugeView(myCardData) {
    const main = document.getElementById("akmApp")
 
    let knapContainer = document.createElement('div');
-   
+   knapContainer.classList.add('divButton');
    // knap (button) i Dag 
    let idagTo = document.createElement('a'); 
-   idagTo.style.color = 'red';
+   idagTo.classList.add('idagToClass');
+   // idagTo.style.color = 'blue';
    idagTo.innerText = 'I DAG'; 
    
    // knap (button) ugen 
    let ugenTo = document.createElement('a'); 
-   ugenTo.style.color = 'red';
+   // ugenTo.style.color = 'black';
+   ugenTo.classList.add('ugeToClass');
    ugenTo.innerText = 'UGEN'; 
    knapContainer.appendChild(ugenTo); 
    knapContainer.appendChild(idagTo); 
