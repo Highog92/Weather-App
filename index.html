@@ -6,39 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mads og Kamilla og Aminas weather app</title>
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/loading.css">
+    <link rel="stylesheet" href="./assets/css/burger-menu.css">
+    <link rel="stylesheet" href="./assets/css/button.css">
+    <link rel="stylesheet" href="assets/css/Ugen.css">
+    <script src="./assets/js/ugeView.js" defer></script>
+    <script src="./assets/js/burger.js" defer></script>
 
 </head>
 <body>
-    
-    <main>
-        <div class="favoritPosition">
-            <img src="" alt="">
-            <img src="" alt="">
-        </div>   <!-- Classen kan ændres -->
-        <section class="sectionMain">
-            <p>By Navn</p>
-            <p>temperatur</p>
-            <p>vind</p>
-            <p>nedbør</p> 
-            <img src="./assets/images/" alt="ikon af vejret" title="vejrikon" />
-            <div>
-                <img src="./assets/images/" alt="solopgang" />
-                <p>Solopgang kl.</p>
-                <img src="./assets/images/" alt="solnedgang" />
-                <p>Solnedgang kl.</p>
-            </div>
-        </section>
-        <section class="sectionSlider">
-            <div class="sliderCards">
-                <p>Tidspunkt</p>
-                <img src="./assets/images/" alt="ikon af vejret" title="vejrikon" />
-                <p>temperatur</p>
-            </div>
-            <div>
-                <button><a href="index.html">I DAG</a></button>
-                <button><a href="tabel.html">UGEN</a></button>
-            </div>
-        </section>
-    </main>
+    <header>
+        <div class="burger-lines">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <nav class="burger-box">
+            <ul class="nav-links">
+                <span>
+                    <input type="text" placeholder="Søg lokation" />
+                </span>
+
+                <h3 class="burger-heading">Lokationer</h3>
+                <ul>
+                    <li class="city-weather">
+                        <p>[Bynavn]</p>
+                        <img src="" alt="f-s">
+                    </li>
+                    <li class="threedays">
+                        <img src="assets/SVG/Fuld-sol.svg" alt="vejr-billed-dag1">
+                        <p>-3°</p>
+                        <img src="assets/SVG/Sol-skyer.svg" alt="vejr-billed-dag2">
+                        <p>-3°</p>
+                        <img src="assets/SVG/Sol-letskyet.svg" alt="vejr-billed-dag3">
+                        <p>-3°</p>
+                    </li>
+                </ul>
+                
+                <p class="burger-heading">Sidst besøgt</p>
+                
+                <ul class="last-visit">
+                    <li>
+                        <p>[Bynavn]</p>
+                        <img src="" alt="favorit-stjerne">
+            </li>
+        </ul>
+
+        <ul class="last-visit">
+            <li>
+                <p>[Bynavn]</p>
+                <img src="" alt="favorit-stjerne">
+            </li>
+        </ul>
+        <hr>
+        <p>M's, K's & A's</p>
+        <p>Meteologisk Institut</p>
+        
+    </ul>
+    </nav>
+</header>
+    <section id="akmApp"></section>
 </body>
 </html>

@@ -1,0 +1,30 @@
+#akmApp {
+    background-color: var(--lillaBG);
+}
+
+table {
+    color: var(--hvid);
+}
+
+.weatherscheme {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--lillaFokus);
+    margin: 15px;
+    border-spacing: 15px;
+}
+
+.weatherscheme tr{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.weatherscheme td {
+    margin-right: 10px;
+    border-bottom: solid;
+
+}

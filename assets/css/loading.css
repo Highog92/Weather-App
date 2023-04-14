@@ -1,0 +1,31 @@
+
+.loadingSectionClass{
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: var(--lillaBG);
+}
+
+.loadingIconClass {
+  display: grid;
+  filter: hue-rotate(10deg);
+  width: 70%;
+  border: solid 10px var(--lillaFokus);
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 40px 30px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 10%;
+  place-content: center;
+  margin: auto;
+  animation: rotates 10s;
+  animation-iteration-count: infinite;
+}
+
+/* @keyframes rotates {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(1080deg);
+  }
+} */
