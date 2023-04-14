@@ -19,8 +19,7 @@ table {
 
 .weatherscheme tr{
     display: flex;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 5px;
 }
 

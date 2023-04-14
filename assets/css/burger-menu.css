@@ -47,11 +47,14 @@ nav ul li img {
     padding: 15px;
     border-radius: 10px;
     background-color: var(--hvid);
+    overflow: hidden;
+    
 }
 
 .burger-lines {
     display: none;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .burger-lines div {
@@ -66,18 +69,22 @@ nav ul li img {
 
 @media screen and (max-width: 768px) {
     body {
-        overflow-x: hidden
+        overflow-x: hidden;
     }
 
+
+
     .nav-links {
+        /* display: none; */
+        display: flex;
         position: absolute;
         right: -4rem;
         /* width: 100vw; */
         /* height: 100vh; */
-        top: 1.5rem; /*højde på burgerbox*/
+        top: 1.5rem;
+        /*højde på burgerbox*/
         /* background-color: #504994; */
-        display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
         transform: translate(100vw);
         transition: transform 0.5s ease-in;
@@ -94,12 +101,13 @@ nav ul li img {
 }
 
 .nav-active {
+    display: inline-block;
     transform: translate(-20vw);
-
 }
 
 @keyframes navLinkFade {
     from {
+
         opacity: 0;
         transform: translate(50px);
     }

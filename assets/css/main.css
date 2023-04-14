@@ -94,25 +94,26 @@ p {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.scrollSection{
+.scrollSection {
     display: flex;
     flex-direction: row;
     overflow: auto;
 }
-.scrollSection::-webkit-scrollbar{
-display: none;
+
+.scrollSection::-webkit-scrollbar {
+    display: none;
 }
 
 .lilleRammeClass {
     margin: 1rem 5px 2rem 5px;
     border-style: none;
     background-color: var(--lillaFokus);
-    width: 100%;
+    padding: 0 5px 0 5px;
     border-radius: 100px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.lilleRammeClass p{
+.lilleRammeClass p {
     font-size: 1rem;
-    
+
 }
