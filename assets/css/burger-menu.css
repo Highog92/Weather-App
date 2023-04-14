@@ -17,6 +17,7 @@ nav ul li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* margin: 0 1rem 0 1rem; */
     padding: 10px;
 }
 
@@ -135,7 +136,7 @@ nav ul li img {
     justify-content: space-between;
     border-radius: 10px 10px 0px 0px;
     color: var(--hvid);
-    padding: 10px 10px 0 10px;
+    /* padding: 10px 10px 0 10px; */
 }
 
 .threedays {
@@ -150,7 +151,7 @@ nav ul li img {
 .last-visit {
     background-color: var(--lillaFokus);
     border-radius: 10px;
-    margin: 1em 0 1em 0;
+    margin: 20px 0 20px 0;
     padding: 10px;
     color: var(--hvid);
 }
