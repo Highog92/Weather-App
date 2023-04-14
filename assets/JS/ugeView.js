@@ -1,14 +1,30 @@
-let myData = null;
+const myUri = `https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,precipitation,windspeed_10m&models=icon_eu&daily=sunrise,sunset&timezone=Europe%2FBerlin`;
 
+let myData = null;
 let myApp = null;
 
 /* kicks off app when the DOM is loaded */
 window.addEventListener("load", hentLoadScreen);
-
 function hentLoadScreen() {
-   fetchData();
+   fetch(myUri)
+      .then(
+         (dataModtaget)=> {
+            return dataModtaget.json();
+         }
+      )
+      .then(
+         (data) => {
+            bygLoadScreen();
+            asyncLoad(data);
+            console.log({data});
+         }
+      )
+      .catch( //er det kun tastefejl/stavefejl i uri'en?
+         (error) => {
+            console.error("****  Her er fejlen!  ****", error);
+         }
+      );
    myApp = document.getElementById('akmApp');
-   bygLoadScreen();
 }
 
 //Bygger loadingsreenen
@@ -28,12 +44,12 @@ function startCards(dataModtaget) {
    // kaldes fra fetchData når data er klar. 
    // set myData variablen til det modtagne data, så det er tilgængelig for alle funktioner
    myData = dataModtaget;
-
+   // console.log('function startCards ',{myData});
    //kald funktionen sletSide for at slette indhold i app-tagget, som er indeholdt i myApp.
    sletSide();
 
    // kalder en funktion der kan bygge cards. den hedder bygCards
-   bygCards(dataModtaget);
+   bygCards(myData);
 }
 
 function sletSide() {
@@ -41,7 +57,7 @@ function sletSide() {
    myApp.innerHTML = "";
 }
 function bygCards(data) {
-   console.log("Her er data: ", data)
+   console.log("Her er data: ", {data})
    //map-metoden finder data for hvert card, og sender det til en funktion der
    //kan bygge dit galleri kort for dyret. funktionen hedder buildCard, og har brugfor data for dyret
    data.map((cards) => {
@@ -52,6 +68,7 @@ function bygCards(data) {
 //---------Funktionen homeLanding()-------            
 // Forsiden/home
 function homeLanding(myData) {
+
    let homeLanding = document.createElement('section');
    homeLanding.classList.add('homeLandingClass');
 
@@ -80,8 +97,8 @@ function homeLanding(myData) {
    regnNu.innerText = myData.regn;
    mainRamme.appendChild(regnNu);
    //    iconNu
-   let iconNu = document.createElement('span');
-   iconNu.innerHTML = myData.icon;
+   let iconNu = document.createElement('img');
+   iconNu.scr = myData.icon;
    iconNu.classList.add('iconNuClass');
    mainRamme.appendChild(iconNu);
    //    solDiv
@@ -89,8 +106,8 @@ function homeLanding(myData) {
    solDiv.classList.add('solDivClass');
 
    //  icon til solopgang
-   let solopGang = document.createElement('span');
-   solopGang.innerHTML = myData.solopicon;
+   let solopGang = document.createElement('img');
+   solopGang.src = myData.solopicon;
    solopGang.classList.add('solopGangClass');
    solDiv.appendChild(solopGang);
    //   solopgang
@@ -99,8 +116,8 @@ function homeLanding(myData) {
    solopgang.innerText = myData.solopgang;
    solDiv.appendChild(solopgang);
    //icon til solnedgang
-   let solnedGangIcon = document.createElement('span');
-   solnedGangIcon.innerHTML = myData.solnedicon;
+   let solnedGangIcon = document.createElement('img');
+   solnedGangIcon.src = myData.solnedicon;
    solnedGangIcon.classList.add('solnedgangClass');
    solDiv.appendChild(solnedGangIcon);
    //  solnedgang
@@ -131,8 +148,8 @@ function homeLanding(myData) {
       lilleCard.appendChild(klokke);
 
       //    tempbillede
-      let tempBillede = document.createElement('p');
-      tempBillede.innerHTML = myData.solnedicon;
+      let tempBillede = document.createElement('img');
+      tempBillede.src = myData.solnedicon;
       tempBillede.classList.add('tempBilled');
       lilleCard.appendChild(tempBillede);
 
@@ -217,6 +234,7 @@ function ugeView(myCardData) {
       e.preventDefault();
       sletSide(); 
       bygCards(myCardData);
+      console.log({myCardData});
    });
 
    const setApiDate = (addDays = 0) => {
@@ -307,40 +325,41 @@ function ugeView(myCardData) {
 
 
 //Starter funktionen fetchData (Dummy Data)
-async function fetchData() {
+async function asyncLoad(data) {
 
    await new Promise(resolve => setTimeout(resolve, 5000));//SKAL ÆDRES TIL 2 SEKUNDER
 
-   const myData = [
+   dataCard = [
 
       {
-         dato: '16.02.2023',
+         dato: data.daily.time[0],
          time: '11.56',
          by: 'Aalborg',
-         temp: '8o',
-         vindHastighed: '20m/s',
-         regn: '0mm',
-         icon: '⛈️',
-         solopicon: '☀️',
-         solopgang: '07:46',
-         solnedicon: '🌤️',
-         solnedgang: '17:22'
+         temp: data.hourly.temperature_2m[0]+'\u00B0',
+         vindHastighed: data.hourly.windspeed_10m[0]+'m/s',
+         regn: data.hourly.precipitation[0]+'mm',
+         icon: 'assets/SVG/Fuld-sol.svg',
+         solopicon: '../SVG/solOpGang.png',
+         solopgang: data.daily.sunrise[0],
+         solnedicon: '../SVG/solNedGang.png',
+         solnedgang: data.daily.sunset[0]
       },
       {
-         dato: '16.02.2023',
+         dato: data.daily.time[0],
          time: '11.56',
          by: 'Nørresundby',
-         temp: '7o',
-         vindHastighed: '25m/s',
-         regn: '0mm',
-         icon: '⛈️',
-         solopicon: '☀️',
-         solopgang: '07:45',
-         solnedicon: '🌤️',
-         solnedgang: '17:23'
+         temp: data.hourly.temperature_2m[0]+'\u00B0',
+         vindHastighed: data.hourly.windspeed_10m[0]+'m/s',
+         regn: data.hourly.precipitation[0]+'mm',
+         icon: '../SVG/Fuld-sol.svg',
+         solopicon: '../SVG/solOpGang.png',
+         solopgang: data.daily.sunrise[0],
+         solnedicon: '../SVG/solNedGang.png',
+         solnedgang: data.daily.sunset[0]
       },
    ];
-   startCards(myData);
+   console.log(dataCard);
+   startCards(dataCard);
 }
 
 
