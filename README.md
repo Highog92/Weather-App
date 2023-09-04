@@ -1,3 +1,2 @@
 # Weather-App
-Min første Vejr App
-yest
+School group assignment where we should built a weather app
