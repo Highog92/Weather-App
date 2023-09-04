@@ -1,2 +1,2 @@
 # Weather-App
-School group assignment where we should built a weather app
+school assignment where we had to build a weather app
