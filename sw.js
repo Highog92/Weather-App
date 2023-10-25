@@ -1,4 +1,5 @@
 const staticCacheName = 'site-static-v1.2'
+const dynamicCacheName = 'site-dynamic-v1.4'
 
 const assets = [
     '/',
@@ -65,14 +66,32 @@ self.addEventListener('activate', event => {
 // Når serviceworkeren er aktiveret har vi mulighed for at lytte på alle de forskellige fetch requests der bliver sendt fra sitet. 
 // Der med kan vi bruge serviceworkeren som en slags proxy server, hvor vi kan påvirke de svar der kommer fra serveren, inden de rammer browseren.
 
-self.addEventListener('fetch', event => {
 
+// Funktionen til styring af antal filer i en given cache
+const limitCacheSize = (cacheName, numberOfAllowedFiles) => {
+
+    // Åbn den angivende cache
+    caches.open(cacheName).then(cache => {
+        // Hent array af cache keys
+        cache.keys().then(keys => {
+            // Hvis mængden af filer overstiger det tilladte
+            if (keys.length > numberOfAllowedFiles) {
+                // Slet første index (ældste fil) og kør funktion igen indtil antal er nået 
+                cache.delete(keys[0]).then(limitCacheSize(cacheName, numberOfAllowedFiles))
+
+            }
+        })
+    })
+}
+
+
+self.addEventListener('fetch', event => {
     // Konrtoller svar på request
     event.respondWith(
         // Kig efter file match i cache
         caches.match(event.request).then(cachesRes => {
             // Returner match fra cache - ellers hent fil på server
-            return (cachesResult || fetch(event.request).then(fetchResult => {
+            return (cachesRes || fetch(event.request).then(async fetchRes => {
                 // Tilføjer nye sider til cachen
                 return caches.open(dynamicCacheName).then(cache => {
                     // Bruger put til at tilføje sider til vores cache
@@ -86,29 +105,16 @@ self.addEventListener('fetch', event => {
         })
     )
     console.log('Fetct event', event);
-    // Funktionen til styring af antal filer i en given cache
-    const limitCacheSize = (cacheName, numberOfAllowedFiles) => {
 
-        // Åbn den angivende cache
-        caches.open(cacheName.then(cache => {
-            // Hent array af cache keys
-            cache.keys().then(keys => {
-                // Hvis mængden af filer overstiger det tilladte
-                if (keys.length > numberOfAllowedFiles) {
-                    // Slet første index (ældste fil) og kør funktion igen indtil antal er nået 
-                    cache.delete(keys[0]).then(limitCacheSize(cacheName, numberOfAllowedFiles))
-
-                }
-            })
-        }))
-    }
 
     
-})
+    // Kalder limit cache funktionen
+    // Limiter cachen til 2 filer
+    limitCacheSize(dynamicCacheName, 2)
+    console.log('Det virker', dynamicCacheName);
+} 
+)
 
-// Kalder limit cache funktionen
-limitCacheSize(dynamicCacheName, 2)
-console.log('Det virker', dynamicCacheName);
 
 
 // Registrering af ny eller opdateret serviceworker
