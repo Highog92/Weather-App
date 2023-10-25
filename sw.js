@@ -4,11 +4,13 @@ const dynamicCacheName = 'site-dynamic-v1.4'
 const assets = [
     '/',
     "/index.html",
+    "/Fallback.html",
     "assets/css/burger-menu.css",
     "assets/css/button.css",
     "assets/css/loading.css",
     "assets/css/main.css",
     "assets/css/Ugen.css"
+
 ]
 
 
@@ -53,10 +55,10 @@ self.addEventListener('activate', event => {
                 keys.filter(key => key !== staticCacheName).map(key => caches.delete(key))
             )
 
-            // const filteredkeys = keys.filter(key => key !== staticCacheName)
-            // filteredkeys.map(key => {
-            //     caches.delete(key)
-            // })
+            const filteredkeys = keys.filter(key => key !== staticCacheName)
+            filteredkeys.map(key => {
+                caches.delete(key)
+            })
         })
 
     )
@@ -102,15 +104,17 @@ self.addEventListener('fetch', event => {
                 })
             })
             )
-        })
-    )
-    console.log('Fetct event', event);
-
+        }).catch(() => {
+                // Hvis ovenstående giver fejl kaldes 404 fallback siden
+            return caches.match('/Fallback.html')
+        }))
+        
+        console.log('Fetct event', event);
 
     
     // Kalder limit cache funktionen
-    // Limiter cachen til 2 filer
-    limitCacheSize(dynamicCacheName, 2)
+    // Limiter cachen til 50 filer
+    limitCacheSize(dynamicCacheName, 50)
     console.log('Det virker', dynamicCacheName);
 } 
 )
